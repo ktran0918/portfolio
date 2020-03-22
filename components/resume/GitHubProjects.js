@@ -51,6 +51,7 @@ export default function GitHubProjects() {
   const [error, setError] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
 
+
   async function fetchSearchResults() {
     setLoading(true);
     try {
@@ -82,6 +83,17 @@ export default function GitHubProjects() {
       }
     }
   } // end of fetchSearchResults()'s definition
+
+
+  function onToggleSearch() {
+    setShowSearch(!showSearch);
+    // Empty repos and search query on hiding search
+    if (!showSearch) {
+      setRepos([]);
+    }
+    setInputQuery('');
+  }
+
 
   // Render
   return (
@@ -150,7 +162,7 @@ export default function GitHubProjects() {
             >
               <SearchInput
                 value={inputQuery}
-                placeholder='search query'
+                placeholder="Express.js, React, etc."
                 autoFocus
                 onChange={e => { setInputQuery(e.target.value); }}
               />
@@ -182,7 +194,7 @@ export default function GitHubProjects() {
       </div>
 
       {/* <div style={{ 'grid-column': 'span 2' }}> */}
-      <ToggleSearch onClick={(e) => { setShowSearch(!showSearch); }}>
+      <ToggleSearch onClick={onToggleSearch}>
         {showSearch ? 'Hide search' : 'Search other GitHub repos'}
       </ToggleSearch>
       {/* </div> */}
