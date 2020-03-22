@@ -1,0 +1,39 @@
+[
+  {
+    "employer": "Information Services / College of Science IT",
+    "position": "Student Full Stack Developer",
+    "location": "Corvallis, OR",
+    "startdate": "May 2019",
+    "enddate": "current",
+    "responsibilities": [
+      "Build and maintain MEAN stack applications powering day-to-day IT operations",
+      "Design REST integrations between asset management databases and the ticketing platform",
+      "Administer CentOS web servers, including upgrading system packages and monitoring scheduled tasks",
+      "Communicate with stakeholders throughout the development lifecycle"
+    ]
+  },
+  {
+    "employer": "ASOSU SafeRide",
+    "position": "Driver / Navigator",
+    "location": "Corvallis, OR",
+    "startdate": "Sep. 2018",
+    "enddate": "May 2019",
+    "responsibilities": [
+      "Provided safer alternative rides to university students after hours",
+      "Coordinated pickup and dropoff routes while using a dispatching app as a guide",
+      "Initiated interesting conversations with riders and paid attention to their needs"
+    ]
+  },
+  {
+    "employer": "Piano Tutor",
+    "position": "Self-Employed",
+    "location": "",
+    "startdate": "Mar. 2015",
+    "enddate": "Dec. 2016",
+    "responsibilities": [
+      "Offered private instructions to beginning and intermediate students age 4-17",
+      "Designed custom learning materials that best address the students’ strengths and weaknesses",
+      "Communicated with parents about their children’s progress"
+    ]
+  }
+]
