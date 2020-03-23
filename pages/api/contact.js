@@ -1,6 +1,6 @@
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
-const { outlook } = require('../config/credentials');
+import { outlook } from '../../config/credentials';
 
 const transporter = nodemailer.createTransport({
   service: 'outlook',
@@ -11,6 +11,7 @@ const transporter = nodemailer.createTransport({
     pass: outlook.pass
   }
 });
+
 
 
 function sendEmail({ name, email, subject, body }) {
@@ -30,4 +31,19 @@ function sendEmail({ name, email, subject, body }) {
   });
 }
 
-module.exports = sendEmail;
+
+export default async (req, res) => {
+  if (req.method === 'POST') {
+    const maildata = req.body;
+    console.log(maildata);
+
+    try {
+      let response = await sendEmail(req.body);
+      console.log('==== SUCCESS: ', response);
+      res.status(200).send('success');
+    } catch (error) {
+      console.error('==== FAILURE: ', error);
+      res.status(500).send('The server was unable to send the message.');
+    }
+  }
+};
