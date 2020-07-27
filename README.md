@@ -1,6 +1,6 @@
 # Khoa Tran's Web Portfolio
 
-My portfolio-styled website that features a resume, blog, and contact form. It is built with **React.js** and Express.
+A proof-of-concept personal website that features a resume, blog, and contact form, written in Next.js and React.
 
 ## Technologies
 
